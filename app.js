@@ -1,6 +1,6 @@
 const TextArea = document.querySelector(".text-area");
 const Mensaje = document.querySelector(".mensaje");
-const Respuesta = document.querySelector(".respuesta");
+const Copiar = document.querySelector(".btn-copiar");
 const Muñeco = document.querySelector(".muñeco");
 const Alerta = document.querySelector(".alerta");
 const Instrucciones = document.querySelector(".instrucciones");
@@ -15,7 +15,7 @@ function btnEncriptar(){
     const textoEncriptado = encriptar(TextArea.value);
     Mensaje.value = textoEncriptado;
     TextArea.value = "";
-    Respuesta.style.display = "block";
+    Copiar.style.display = "block";
     Mensaje.style.display = "block";
     Muñeco.style.display = "none";
     Alerta.style.display = "none";
