@@ -16,19 +16,23 @@
 
 body{
     background-color: var(--color-primario);
-    min-width: ;
+    font-family: var(--fuente-principal);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 header{
-    position: relative;
+    position: absolute;
 }
 
 .logo{
     margin: 2.5rem 0 0 2.5rem;
-    position: absolute;
+    position: relative;
 }
 
 main{
+    flex: 1;
     display: flex;
     justify-content: flex-end;
     gap: 5rem;
@@ -51,6 +55,7 @@ main{
     text-align: left;
     color: #0A3871;
     outline: none;
+    resize: none;
 }
 
 .text-area :focus{
@@ -101,7 +106,6 @@ main{
     font-size: 1rem;
     font-weight: 400;
     text-align: center;
-    margin: 0;
     cursor: pointer;
 }
 
@@ -117,7 +121,12 @@ main{
     border: #0A3871 solid 1px;
 }
 
+.espera{
+    display: block;
+}
+
 .mensaje-desencriptado{
+    display: block;
     background-color: #ffffff;
     border-radius: 2rem;
     padding: 2rem;
@@ -126,9 +135,15 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 24px 32px -8px #00000014;
+}
+
+.muñeco{
+    display: block;
 }
 
 .alerta{
+    display: block;
     font-family: Inter;
     font-size: 1.5rem;
     font-weight: 700;
@@ -137,6 +152,7 @@ main{
 }
 
 .instrucciones{
+    display: block;
     font-family: Inter;
     font-size: 1rem;
     font-weight: 400;
@@ -145,20 +161,43 @@ main{
     color: #343A40;
 }
 
-.btn-copiar{
-    color: #0A3871;
-    background-color: #D8DFE8;
-    border: #0A3871 solid 1px;
+.respuesta{
+    display: none;
 }
 
 .mensaje{
+    /* background-color: yellowgreen; */
+    display: none;
+    font-family: Inter;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    color: #495057;
+    text-align: left;
+    height: 80%;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.btn-copiar{
+    display: none;
+    height: 7%;
+    width: 100%;
+    color: #0A3871;
+    background-color: #D8DFE8;
+    border: #0A3871 solid 1px;
+    margin: 2rem;
 }
 
 footer {
     background-color: var(--color-secundario);
     color: var(--color-terciario);
     font-family: var(--fuente-principal);
-    padding: 1rem;
+    padding: .5rem;
     text-align: center;
     width: 100%;
+    position: fixed;
+    bottom: 0;
 }
