@@ -136,6 +136,7 @@ main{
     align-items: center;
     justify-content: center;
     box-shadow: 0px 24px 32px -8px #00000014;
+    
 }
 
 .muñeco{
@@ -163,6 +164,7 @@ main{
 
 .respuesta{
     display: none;
+    justify-content: space-between;
 }
 
 .mensaje{
