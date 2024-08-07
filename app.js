@@ -52,3 +52,14 @@ function desencriptar(stringDesencriptada){
     }
     return stringDesencriptada
 }
+
+function btnCopiar(){
+    console.log(Mensaje.value);
+    navigator.clipboard.writeText(Mensaje.value).then(function(){
+        console.log("Texto copiado");
+    }).catch(function(error){
+        console.error("Error al copiar el texto: ", error);
+    });
+    } 
+    
+Copiar.addEventListener("click", btnCopiar);
