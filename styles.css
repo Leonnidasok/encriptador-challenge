@@ -15,11 +15,12 @@
 }
 
 body{
-    background-color: var(--color-primario);
+    background-color: #538cd2;
+    /* background-color: var(--color-primario); */
     font-family: var(--fuente-principal);
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100dvh;
 }
 
 header{
@@ -32,6 +33,7 @@ header{
 }
 
 main{
+    background-color: aqua;
     flex: 1;
     display: flex;
     justify-content: flex-end;
@@ -40,23 +42,21 @@ main{
 }
 
 .rectangulo{
+    background-color: red;
     width: 50%;
     margin-bottom: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
-    /* width: 50%; */
-    /* margin-bottom: 2.5rem; */
-    padding-bottom: 2rem;
+    padding: 2rem;
 }
 
 .text-area{
-    background-color: var(--color-primario);
+    background-color: yellow;
+    /* background-color: var(--color-primario) */
     margin-top: 7%;
     width: 100%;
-    height: 100%;
-    border: none;    
+    border: none;
     font-family: Inter;
     font-size: 2rem;
     font-weight: 400;
@@ -82,12 +82,12 @@ main{
 }
 
 .informacion{
+    background-color: orange;
     display: flex;
     align-items: center;
     font-family: Inter;
     font-size: .75rem;
     font-weight: 400;
-    /* line-height: 3rem; */
     text-align: left;
     gap: .5rem;
     margin-bottom: 1rem;
@@ -99,14 +99,15 @@ main{
 }
 
 .botones{
+    background-color: green;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
     margin-top: 1rem;
     width: 100%;
-    margin-bottom: 2rem;
-    /* margin: auto; */
+    margin: ;
+    margin-bottom: 0;
 }
 
 .btn-encriptar, .btn-desencriptar, .btn-copiar{
@@ -133,14 +134,10 @@ main{
     border: #0A3871 solid 1px;
 }
 
-.espera{
-    display: block;
-}
-
 .mensaje-desencriptado{
-    /* position: relative; */
+    background-color: red;
     display: block;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     border-radius: 2rem;
     padding: 2rem;
     width: 25%;
@@ -150,15 +147,16 @@ main{
     justify-content: center;
     box-shadow: 0px 24px 32px -8px #00000014;
     margin-bottom: 2.5rem;
-    
 }
 
 .muñeco{
+    background-color: yellow;
     display: block;
     width: 100%;
 }
 
 .alerta{
+    background-color: orange;
     display: block;
     font-family: Inter;
     font-size: 1.5rem;
@@ -168,6 +166,7 @@ main{
 }
 
 .instrucciones{
+    background-color: orange;
     display: block;
     font-family: Inter;
     font-size: 1rem;
@@ -177,13 +176,8 @@ main{
     color: #343A40;
 }
 
-.respuesta{
-    display: none;
-    justify-content: space-between;
-}
-
 .mensaje{
-    /* background-color: yellowgreen; */
+    background-color: yellow;
     display: none;
     font-family: Inter;
     font-size: 1.5rem;
@@ -199,6 +193,7 @@ main{
 }
 
 .btn-copiar{
+    background-color: green;
     display: none;
     max-height: 4rem;
     width: 100%;
@@ -222,6 +217,10 @@ footer {
 
 @media (max-width: 1250px) {
 
+    body {
+        height: 100dvh;
+    }
+
     .logo{
         margin-left: 0;
         margin-top: 4rem;
@@ -229,32 +228,26 @@ footer {
 
     main{
         gap: 2rem;
-    }
-
-    .contenido {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
     .rectangulo{
+        max-height: 40%;
         margin-top: 10%;
         width: 100%;
-        height: 40%;
         margin-bottom: 0;
-        padding-bottom: ;
     }
 
     .mensaje-desencriptado{
-        justify-content: flex-start;
-        align-content: center;
+        max-height: 35%;
         width: 100%;
-        padding: 2rem;
-        gap: 0rem;
-        max-height: 25%;
-        margin-top: 10rem;
-        margin-bottom: 0;
+        margin-bottom: 2rem;
+    }
+
+    .mensaje{
+        top: 0;
     }
 
     .muñeco{
@@ -262,16 +255,14 @@ footer {
     }
 
     .btn-copiar{
+        bottom: 0;
+        margin: 2.5rem;
         margin-bottom: 0;
+        width: 100%;
     }
 }
 
 @media (max-width: 550px) {
-
-    main{
-        display: flex;
-        justify-content: flex-end;
-    }
 
     .logo{
         margin: 2rem -1.5rem;
@@ -294,45 +285,10 @@ footer {
     }
 
     .mensaje-desencriptado{
-        margin-top: 12rem;
-        margin-bottom: 0;
+        margin-bottom: 2.5rem;
     }
 
+
+
 }
 
-/* .rectangulo{
-    width: 50%;
-    margin-bottom: 2.5rem;
-}
-.botones{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1rem;
-    width: 100%;
-}
-.mensaje-desencriptado{
-    display: block;
-    background-color: #ffffff;
-    border-radius: 2rem;
-    padding: 2rem;
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 24px 32px -8px #00000014;
-    margin-bottom: 2.5rem;
-    
-}
-.btn-copiar{
-    display: none;
-    max-height: 4rem;
-    width: 100%;
-    color: #0A3871;
-    background-color: #D8DFE8;
-    border: #0A3871 solid 1px;
-    margin: 2rem;
-    margin-bottom: 0;
-} */
