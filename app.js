@@ -4,6 +4,7 @@ const Copiar = document.querySelector(".btn-copiar");
 const Muñeco = document.querySelector(".muñeco");
 const Alerta = document.querySelector(".alerta");
 const Instrucciones = document.querySelector(".instrucciones");
+const Restricciones = document.querySelector(".restricciones")
 
 // La letra "e" es convertida para "enter"
 // La letra "i" es convertida para "imes"
@@ -11,8 +12,28 @@ const Instrucciones = document.querySelector(".instrucciones");
 // La letra "o" es convertida para "ober"
 // La letra "u" es convertida para "ufat"
 
-function btnEncriptar(){
-    const textoEncriptado = encriptar(TextArea.value);
+function aplicarAnimacion() {
+    Restricciones.classList.remove("animar"); // Elimina la clase para reiniciar la animación
+    void Restricciones.offsetWidth; // Forza la reflujo del DOM
+    Restricciones.classList.add("animar"); // Vuelve a agregar la clase para reiniciar la animación
+}
+
+function btnEncriptar() {
+    const texto = TextArea.value.trim();
+    
+    if (texto === "") {
+        Restricciones.textContent = "El campo no debe estar vacío";
+        aplicarAnimacion(); // Aplica la animación
+        return;
+    }
+
+    if (/[A-ZÁÉÍÓÚÑáéíóúñ]/.test(texto)) {
+        Restricciones.textContent = "No se aceptan mayúsculas ni acentos, por favor inserte formato válido";
+        aplicarAnimacion(); // Aplica la animación
+        return;
+    }
+
+    const textoEncriptado = encriptar(texto);
     Mensaje.value = textoEncriptado;
     TextArea.value = "";
     Copiar.style.display = "block";
@@ -20,6 +41,8 @@ function btnEncriptar(){
     Muñeco.style.display = "none";
     Alerta.style.display = "none";
     Instrucciones.style.display = "none";
+    Restricciones.textContent = ""; // Limpia el mensaje de restricciones
+    Restricciones.classList.remove("animar"); // Remueve la clase de animación si se limpia el mensaje
 }
 
 function encriptar(stringEncriptada){
@@ -34,11 +57,31 @@ function encriptar(stringEncriptada){
     return stringEncriptada
 }
 
-function btnDesencriptar(){
-    const textoEncriptado = desencriptar(TextArea.value);
-    Mensaje.value = textoEncriptado;
+function btnDesencriptar() {
+    const texto = TextArea.value.trim();
+    
+    if (texto === "") {
+        Restricciones.textContent = "El campo no debe estar vacío";
+        aplicarAnimacion(); // Aplica la animación
+        return;
+    }
+
+    if (/[A-ZÁÉÍÓÚÑáéíóúñ]/.test(texto)) {
+        Restricciones.textContent = "No se aceptan mayúsculas ni acentos, por favor inserte formato válido";
+        aplicarAnimacion(); // Aplica la animación
+        return;
+    }
+
+    const textoDesencriptado = desencriptar(texto);
+    Mensaje.value = textoDesencriptado;
     TextArea.value = "";
-    //Ver como sacar imagen 
+    Copiar.style.display = "block";
+    Mensaje.style.display = "block";
+    Muñeco.style.display = "none";
+    Alerta.style.display = "none";
+    Instrucciones.style.display = "none";
+    Restricciones.textContent = ""; // Limpia el mensaje de restricciones
+    Restricciones.classList.remove("animar"); // Remueve la clase de animación si se limpia el mensaje
 }
 
 function desencriptar(stringDesencriptada){
@@ -63,3 +106,5 @@ function btnCopiar(){
     } 
     
 Copiar.addEventListener("click", btnCopiar);
+
+

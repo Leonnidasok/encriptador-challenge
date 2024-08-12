@@ -174,7 +174,7 @@ main{
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 2.25rem;
-    color: var(--color-complementario);
+    color: var(--color-secundario);
     text-align: left;
     height: 100%;
     width: 100%;
@@ -282,3 +282,25 @@ footer {
 
 }
 
+@keyframes resaltarRestricciones {
+    0% {
+        color: #FF0000; /* Rojo */
+        transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+        color: #FF9999; /* Rojo claro */
+        transform: scale(1.1); /* Agrandado ligeramente */
+    }
+    100% {
+        color: #FF0000; /* Rojo */
+        transform: scale(1); /* Tamaño normal */
+    }
+}
+
+.restricciones {
+    animation: none; /* Inicialmente sin animación */
+}
+
+.restricciones.animar {
+    animation: resaltarRestricciones 1s ease-in-out; /* Aplica la animación */
+}
