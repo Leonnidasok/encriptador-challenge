@@ -152,7 +152,7 @@ main{
 }
 
 .muñeco{
-    display: block;
+    /* display: block; */
     width: 100%;
 }
 
@@ -251,6 +251,10 @@ footer {
         display: none;
     }
 
+    .cont-muñeco{
+        display: none;
+    }
+
     .btn-copiar{
         bottom: 0;
         margin: 2.5rem;
@@ -308,6 +312,6 @@ footer {
     animation: none; /* Inicialmente sin animación */
 }
 
-.restricciones.animar {
+.animar {
     animation: resaltarRestricciones 1s ease-in-out; /* Aplica la animación */
 }
