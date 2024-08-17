@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">;
+</head>0
 <body>
     <header>
-        <img class="logo" src="./img/Logo.png" alt="Logo de Alura" >
+        <img class="logo" src="./img/Logo.png" alt="Logo de Alura">
     </header>
     <main class="contenido">
         <section class="rectangulo">
-            <textarea class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <textarea class="text-area" placeholder="Ingrese el texto aquí"></textarea>
             <div class="informacion">
-                    <img src="./img/Vector.png" alt="">
-                    <p class="restricciones">Solo letras minúsculas y sin acentos</p>
+                <img src="./img/Vector.png" alt="">
+                <p class="restricciones">Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="botones">
                 <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
@@ -27,16 +27,16 @@
             </div>
         </section>
         <section class="mensaje-desencriptado">
-                <div class="cont-muñeco"><img class="muñeco" src="./img/Muñeco.png" alt="Muñeco"></div>
-                <p class="alerta">Ningún mensaje fue encontrado</p>
-                <p class="instrucciones">Ingresa el texto que quieres encriptar o desencriptar</p>
-                <textarea class="mensaje" cols="20" rows="10" readonly></textarea>
-                <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>
+            <!-- <img class="muñeco" src="./img/Muñeco.png" alt="Muñeco"> -->
+            <p class="alerta">Ningún mensaje fue encontrado</p>
+            <p class="instrucciones">Ingresa el texto que quieres encriptar o desencriptar</p>
+            <textarea class="mensaje" readonly></textarea>
+            <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>
         </section>
     </main>
     <footer class="footer">
         <p>Desarrollado para Alura Challenge, 2024</p>
     </footer>
-<script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
