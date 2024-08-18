@@ -3,7 +3,8 @@
     --color-primario: #eaefff;
     --color-secundario: #0a3871;
     --color-terciario: #ffffff15;
-    --color-complementario: #575758;
+    --color-complementario: #a7a7f2;
+    --color-oscuro: #063547;
 
     /* Variables de fuentes tipográficas */
     --fuente-principal: 'Outfit', sans-serif;
@@ -49,6 +50,7 @@ main{
     flex-direction: column;
     justify-content: space-between;
     padding: 2rem;
+    min-height: 50%;
 }
 
 .text-area{
@@ -84,7 +86,7 @@ main{
     display: flex;
     align-items: center;
     font-family: var(--fuente-principal);
-    color: var(--color-complementario);
+    color: var(--color-oscuro);
     font-size: .75rem;
     font-weight: 400;
     text-align: left;
@@ -117,6 +119,15 @@ main{
     font-weight: 400;
     text-align: center;
     cursor: pointer;
+}
+
+.btn-encriptar:hover, 
+.btn-desencriptar:hover, 
+.btn-copiar:hover, 
+.btn-limpiar:hover {
+    background: linear-gradient(45deg, var(--color-secundario), var(--color-complementario));
+    color: var(--color-primario);
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .btn-encriptar{
@@ -171,7 +182,7 @@ main{
     font-size: 1.5rem;
     font-weight: 700;
     text-align: center;
-    color: var(--color-complementario);
+    color: var(--color-oscuro);
 }
 
 .instrucciones{
@@ -181,7 +192,7 @@ main{
     font-weight: 400;
     line-height: 1.5rem;
     text-align: center;
-    color: var(--color-complementario);
+    color: var(--color-oscuro);
 }
 
 .mensaje{
@@ -243,10 +254,14 @@ footer {
     }
 
     .rectangulo{
-        max-height: 40%;
+        /* max-height: 70%; */
         margin-top: 10%;
         width: 100%;
         margin-bottom: 0;
+    }
+
+    .text-area{
+        min-height: 40%;
     }
 
     .mensaje-desencriptado{
